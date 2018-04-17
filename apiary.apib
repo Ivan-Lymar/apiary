@@ -8,16 +8,38 @@ Application for cook book
             
 ### Get recipe [GET]
 
+Returns recipe info by id.
+
 + Parameters
 
-    + id - A path variable that is required for a valid URL
+    + id - A path variable that represents recipe id
 
 + Response 200 (application/json)
 
         {
-            "test":"test"
-        }
-        
+            "name" : "cary",
+            "description" : "Extrimely spicy Indian dish. Includes meat and rice",
+            "mainPicture" : "assets/dish.jpg",
+            "pictures" : [
+                {"assets/dish.jpg"},
+                {"assets/dish.jpg"},
+                {"assets/dish.jpg"},
+                {"assets/dish.jpg"}
+            ],
+            "ingredients" : [
+                "Vedro vodi - 1 sht",
+                "Ohapka drov - 1 g",
+                "Koshachya jopa - 2 tsp",
+                "Ukrop - 2 tsp",
+                "Plov - 12 gram"
+            ],
+            directions : [
+                "Cut vegetables",
+                "Heat the pan, add oil",
+                "Fry vegetables",
+                "Add spices"
+            ]
+        }        
         
 ## Get list of recipes [/recipes]
             
@@ -26,13 +48,32 @@ Application for cook book
 + Response 200 (application/json)
 
         [
-        {
-            "test":"test1"
-        },
-        {
-            "test":"test1"
-        },
-        {
-            "test":"test1"
-        }
+            {
+                "id" : 1
+                "name" : "cary";
+                "rating" : 2.6;
+                "description" : "Indian food";
+                "picture" : "assets/dish.png";
+            },
+            {
+                "id" : 2
+                "name" : "super cary";
+                "rating" : 3.0;
+                "description" : "Indian food";
+                "picture" : "assets/dish.png";
+            },
+            {
+                "id" : 3
+                "name" : "mega cary";
+                "rating" : 4.4;
+                "description" : "Indian food";
+                "picture" : "assets/dish.png";
+            },
+            {
+                "id" : 4
+                "name" : "cary god";
+                "rating" : 5.0;
+                "description" : "Indian food";
+                "picture" : "assets/dish.png";
+            }
         ]
